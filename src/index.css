@@ -1,3 +1,40 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* ✅ Add this if not already present */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+}
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.typewriter-cursor::after {
+  content: '┃'; /* Tall pretty cursor */
+  color: white; /* Customize cursor color */
+  margin-left: 4px;
+  animation: blink 1s step-start infinite;
+  font-weight: 700;
+  font-size: 1.2em;
+}
+.hover-glow {
+  transition: all 0.3s ease;
+}
+
+.hover-glow:hover {
+  color: white;
+  text-shadow: 0 0 8px white, 0 0 16px white;
+}
+html {
+  scroll-behavior: smooth;
+}
