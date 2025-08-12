@@ -38,3 +38,20 @@ html, body, #root {
 html {
   scroll-behavior: smooth;
 }
+/* ===== Remove click highlight/blip safely ===== */
+
+/* Disable selection & focus outlines for headings, paragraphs, spans, divs */
+h1, h2, h3, h4, h5, h6,
+p, span, div {
+  user-select: none;
+}
+
+*:focus {
+  outline: none !important;
+}
+
+/* Allow selection for interactive elements */
+input, textarea, select, button, a {
+  user-select: text;
+  outline: revert; /* keep browser accessibility outline for keyboard nav */
+}

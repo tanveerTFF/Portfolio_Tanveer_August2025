@@ -1,5 +1,7 @@
 // src/components/BentoGrid.jsx
 import React from 'react';
+import bookCafeImage from '../img/bookCafe.PNG'; 
+
 
 export default function BentoGrid({ onTileClick }) {
   const tileBaseClass =
@@ -24,12 +26,17 @@ export default function BentoGrid({ onTileClick }) {
       </div>
 
       {/* C: Center Hero Tile */}
-      <div
-        className={`${tileBaseClass} col-span-2 row-span-2 flex items-center justify-center`}
-        onClick={() => onTileClick('C')}
-      >
-        <h1 className="text-4xl text-white font-extrabold">PRISM</h1>
-      </div>
+        <div
+          className={`${tileBaseClass} col-span-2 row-span-2 flex items-center justify-center`}
+          onClick={() => onTileClick('C')}
+        >
+          <img
+            src={bookCafeImage}
+            alt="Book Cafe Preview"
+            className="w-full h-full object-cover rounded-xl"
+          />
+        </div>
+
 
       {/* D: Bottom-left music block */}
       <div
